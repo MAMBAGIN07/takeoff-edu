@@ -8514,15 +8514,26 @@ background-color: #8184ff; }
   }
 }
 
-/* Media Query for Portrait Mode or Smaller Screens */
+/* Media query for portrait view */
 @media (max-width: 768px) {
   .card-container {
-      flex-direction: column;
-      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
   }
 
   .card {
-      margin: 20px 0;
+      width: 150px;
+      margin: 10px;
+  }
+  .card h3{
+    font-size: 15px;
+  }
+
+  /* Align single card in the center */
+  .card:nth-child(odd):last-child {
+      margin-left: auto;
+      margin-right: auto;
   }
 }
 
