@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .content b {
+            font-weight: bold;
+        }
+
+        .read-more-btn {
+            background-color: #ffc107;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 20px 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Timeline Style */
+        .timeline {
+            margin: 50px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: black;
+            top: 50%;
+            z-index: 1;
+        }
+
+        .timeline .event {
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .timeline .event::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 3px solid black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .timeline .event span {
+            display: block;
+            margin-top: 30px;
+        }
+
+        .timeline .event.highlighted::before {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>OUR HISTORY</h1>
+
+    <div class="content">
+        <p>Foreign education is an aspiration in the hearts of many students these days. <b>Takeoff Group</b> was established in the year <b>2007</b> to fulfill this need in the market as an Overseas Education Consultant. In the year <b>2010</b>, <b>Mr. Vinay Angalakurthi</b> has taken this as a Franchise and worked as a <b>UK and Australia Consultant</b>.</p>
+        <p>The business was running smoothly but he was not satisfied to serve only for selected candidates as his nature is to serve students and provide employment for unemployed youth. He conducted many surveys on students and Job seekers; found that they are suffering from a lack of technical support and lack of job opportunities in <b>Andhra Pradesh</b>.</p>
+
+        <a href="#" class="read-more-btn">Read More</a>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="timeline">
+        <div class="event"><span>2007-08</span></div>
+        <div class="event"><span>2009</span></div>
+        <div class="event"><span>2010</span></div>
+        <div class="event"><span>2011</span></div>
+        <div class="event"><span>2012</span></div>
+        <div class="event"><span>2013</span></div>
+        <div class="event"><span>2014</span></div>
+        <div class="event"><span>2015</span></div>
+        <div class="event"><span>2016</span></div>
+        <div class="event"><span>2017</span></div>
+        <div class="event"><span>2018</span></div>
+        <div class="event"><span>2019</span></div>
+        <div class="event"><span>2020</span></div>
+        <div class="event"><span>2021</span></div>
+        <div class="event"><span>2022</span></div>
+        <div class="event"><span>2023</span></div>
+        <div class="event highlighted"><span>2024</span></div>
+    </div>
+</div>
+
+</body>
+</html>
