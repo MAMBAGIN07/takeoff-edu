@@ -69,6 +69,62 @@
             text-decoration: underline;
         }
     </style>
+    <style>
+        .card-container {
+    display: flex;
+    justify-content: space-between; /* Ensures space between cards */
+    gap: 20px; /* Creates gap between the cards */
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping if the screen size is smaller */
+}
+
+.unique-card {
+    background-color: #f0f0f0;
+    width: 22%; /* Adjust the width to fit 4 cards in one row */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Ensures vertical alignment */
+    justify-content: space-between;
+    align-items: center; /* Center aligns the content inside each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unique-icon img {
+    width: 60px; /* Adjust the size of the icon as needed */
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.unique-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.unique-description {
+    font-size: 1em;
+    margin-bottom: 20px;
+    text-align: center;
+    flex-grow: 1; /* Ensures the description takes up space */
+}
+
+.unique-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Pushes the button to the bottom */
+    align-self: center; /* Centers the button horizontally */
+}
+
+.unique-btn:hover {
+    background-color: #ddd;
+}
+
+    </style>
 </head>
 <body>
 <section class="ftco-section">  
@@ -129,6 +185,41 @@
 <div class="banner" style="background-image: url('homepg.jpg');">
     <a href="#enroll" class="enroll-btn">Enroll Now</a>
 </div>
+    <div class="card-container">
+    <div class="unique-card" style="background-color: #FF6F61;">
+        <div class="unique-icon">
+            <img src="your-project-icon.png" alt="Project Development Icon">
+        </div>
+        <h3 class="unique-title">Project Development</h3>
+        <p class="unique-description">Project development aims at turning promising innovation ideas into feasible project concepts.</p>
+        <button class="unique-btn">GET STARTED</button>
+    </div>
+    <div class="unique-card" style="background-color: #FFD166;">
+        <div class="unique-icon">
+            <img src="your-thesis-icon.png" alt="Thesis Writing Icon">
+        </div>
+        <h3 class="unique-title">Thesis Writing</h3>
+        <p class="unique-description">We at Takeoff Group offer the best in class thesis writing assistance in the most ethical manner.</p>
+        <button class="unique-btn">GET STARTED</button>
+    </div>
+    <div class="unique-card" style="background-color: #06D6A0;">
+        <div class="unique-icon">
+            <img src="your-paper-icon.png" alt="Paper Writing Icon">
+        </div>
+        <h3 class="unique-title">Paper Writing</h3>
+        <p class="unique-description">Professional & Reliable paper writing service with plagiarism-free papers.</p>
+        <button class="unique-btn">GET STARTED</button>
+    </div>
+    <div class="unique-card" style="background-color: #4CC9F0;">
+        <div class="unique-icon">
+            <img src="your-publication-icon.png" alt="Paper Publication Icon">
+        </div>
+        <h3 class="unique-title">Paper Publication</h3>
+        <p class="unique-description">Submit your research paper to get it published in International journal publication.</p>
+        <button class="unique-btn">GET STARTED</button>
+    </div>
+</div>
+
 <div class="container1">
     <h11 id="heading"></h11>
 </div>
