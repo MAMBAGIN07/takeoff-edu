@@ -70,17 +70,17 @@
         }
     </style>
     <style>
-        .card-container {
+        .service-card-wrapper {
     display: flex;
     justify-content: space-between; /* Ensures space between cards */
     gap: 20px; /* Creates gap between the cards */
     padding: 20px;
-    flex-wrap: wrap; /* Allows wrapping if the screen size is smaller */
+    flex-wrap: wrap; /* Allows wrapping to form two rows on portrait screens */
 }
 
 .unique-card {
     background-color: #f0f0f0;
-    width: 22%; /* Adjust the width to fit 4 cards in one row */
+    width: 22%; /* Default width for larger screens */
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -97,13 +97,13 @@
 }
 
 .unique-title {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .unique-description {
-    font-size: 1em;
+    font-size: 0.9em;
     margin-bottom: 20px;
     text-align: center;
     flex-grow: 1; /* Ensures the description takes up space */
@@ -123,6 +123,19 @@
 .unique-btn:hover {
     background-color: #ddd;
 }
+
+/* For small portrait screens */
+@media (max-width: 768px) {
+    .unique-card {
+        width: 45%; /* Makes the cards smaller to fit two per row on portrait screens */
+        margin-bottom: 20px; /* Adds spacing between rows */
+    }
+
+    .service-card-wrapper {
+        justify-content: space-around; /* Ensures space around the cards for smaller screens */
+    }
+}
+
 
     </style>
 </head>
@@ -186,6 +199,7 @@
     <a href="#enroll" class="enroll-btn">Enroll Now</a>
 </div>
     
+    <div class="service-card-wrapper">
     <div class="unique-card" style="background-color: #FF6F61;">
         <div class="unique-icon">
             <img src="your-project-icon.png" alt="Project Development Icon">
@@ -218,6 +232,7 @@
         <p class="unique-description">Submit your research paper to get it published in International journal publication.</p>
         <button class="unique-btn">GET STARTED</button>
     </div>
+</div>
 
 
 <div class="container1">
