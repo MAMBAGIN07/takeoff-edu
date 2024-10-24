@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./menu_files/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* Footer */
         footer {
@@ -72,10 +74,10 @@
     <style>
         .service-card-wrapper {
     display: flex;
-    justify-content: space-between; /* Ensures space between cards */
-    gap: 20px; /* Creates gap between the cards */
+    justify-content: space-between;
+    gap: 20px;
     padding: 20px;
-    flex-wrap: wrap; /* Allows wrapping to form two rows on portrait screens */
+    flex-wrap: wrap;
 }
 
 .unique-card {
@@ -84,16 +86,16 @@
     padding: 20px;
     border-radius: 10px;
     display: flex;
-    flex-direction: column; /* Ensures vertical alignment */
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* Center aligns the content inside each card */
+    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.unique-icon img {
-    width: 60px; /* Adjust the size of the icon as needed */
-    height: 60px;
+.unique-icon i {
+    font-size: 50px; /* Adjust the icon size as needed */
     margin-bottom: 20px;
+    color: #fff; /* Matches the color theme of the card */
 }
 
 .unique-title {
@@ -106,7 +108,7 @@
     font-size: 0.9em;
     margin-bottom: 20px;
     text-align: center;
-    flex-grow: 1; /* Ensures the description takes up space */
+    flex-grow: 1;
 }
 
 .unique-btn {
@@ -116,26 +118,24 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: auto; /* Pushes the button to the bottom */
-    align-self: center; /* Centers the button horizontally */
+    margin-top: auto;
+    align-self: center;
 }
 
 .unique-btn:hover {
     background-color: #ddd;
 }
 
-/* For small portrait screens */
 @media (max-width: 768px) {
     .unique-card {
         width: 45%; /* Makes the cards smaller to fit two per row on portrait screens */
-        margin-bottom: 20px; /* Adds spacing between rows */
+        margin-bottom: 20px;
     }
 
     .service-card-wrapper {
-        justify-content: space-around; /* Ensures space around the cards for smaller screens */
+        justify-content: space-around;
     }
 }
-
 
     </style>
 </head>
@@ -198,11 +198,10 @@
 <div class="banner" style="background-image: url('homepg.jpg');">
     <a href="#enroll" class="enroll-btn">Enroll Now</a>
 </div>
-    
     <div class="service-card-wrapper">
     <div class="unique-card" style="background-color: #FF6F61;">
         <div class="unique-icon">
-            <img src="your-project-icon.png" alt="Project Development Icon">
+            <i class="fas fa-project-diagram"></i> <!-- Project Development Icon -->
         </div>
         <h3 class="unique-title">Project Development</h3>
         <p class="unique-description">Project development aims at turning promising innovation ideas into feasible project concepts.</p>
@@ -210,7 +209,7 @@
     </div>
     <div class="unique-card" style="background-color: #FFD166;">
         <div class="unique-icon">
-            <img src="your-thesis-icon.png" alt="Thesis Writing Icon">
+            <i class="fas fa-pencil-alt"></i> <!-- Thesis Writing Icon -->
         </div>
         <h3 class="unique-title">Thesis Writing</h3>
         <p class="unique-description">We at Takeoff Group offer the best in class thesis writing assistance in the most ethical manner.</p>
@@ -218,7 +217,7 @@
     </div>
     <div class="unique-card" style="background-color: #06D6A0;">
         <div class="unique-icon">
-            <img src="your-paper-icon.png" alt="Paper Writing Icon">
+            <i class="fas fa-file-alt"></i> <!-- Paper Writing Icon -->
         </div>
         <h3 class="unique-title">Paper Writing</h3>
         <p class="unique-description">Professional & Reliable paper writing service with plagiarism-free papers.</p>
@@ -226,7 +225,7 @@
     </div>
     <div class="unique-card" style="background-color: #4CC9F0;">
         <div class="unique-icon">
-            <img src="your-publication-icon.png" alt="Paper Publication Icon">
+            <i class="fas fa-print"></i> <!-- Paper Publication Icon -->
         </div>
         <h3 class="unique-title">Paper Publication</h3>
         <p class="unique-description">Submit your research paper to get it published in International journal publication.</p>
