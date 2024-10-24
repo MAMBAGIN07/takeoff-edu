@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - IT Company</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js for graphs -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #1a237e;
+            font-weight: 600;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #0d47a1;
+            letter-spacing: 2px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #616161;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 1.5s ease-in-out;
+        }
+
+        .chart-container {
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-around;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        canvas {
+            max-width: 600px;
+            max-height: 400px;
+        }
+
+        .team-member {
+            margin-bottom: 20px;
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #1a237e;
+            font-weight: bold;
+            background-color: #e3f2fd;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background-color: #bbdefb;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>About Us</h1>
+
+        <p>Welcome to <span style="color: #0288d1; font-weight: bold;">[Your IT Company Name]</span>! We are a leading provider of IT solutions and services, offering a wide range of expertise from web development, cloud computing, AI integration, to IT consultancy. Our company is built on a foundation of innovation and a commitment to delivering the highest quality of services to our clients across various industries.</p>
+        
+        <p>In addition to our core services, we are passionate about mentoring the next generation of tech talent. We provide internships to students, equipping them with real-world skills and preparing them for the demands of the tech industry.</p>
+
+        <h2>Our Services</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>Cloud Solutions</li>
+            <li>Artificial Intelligence Integration</li>
+            <li>Data Analytics</li>
+            <li>IT Consultancy</li>
+        </ul>
+
+        <h2>Internships</h2>
+        <p>Our internship program offers students hands-on experience with cutting-edge technologies. We have successfully placed many interns into full-time positions in the tech industry. Our internship program covers areas such as:</p>
+        <ul>
+            <li>Full-Stack Development</li>
+            <li>Data Science</li>
+            <li>Cybersecurity</li>
+            <li>Cloud Computing</li>
+            <li>Project Management</li>
+        </ul>
+
+        <h2>Company Workflow</h2>
+        <div class="chart-container">
+            <canvas id="workflowChart"></canvas>
+        </div>
+
+        <h2>Student Placement Statistics</h2>
+        <div class="chart-container">
+            <canvas id="jobChart"></canvas>
+        </div>
+
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <h3>John Doe - CEO & Founder</h3>
+            <p>John has over 20 years of experience in the IT industry, leading the company with a vision to make cutting-edge technologies accessible to businesses of all sizes.</p>
+        </div>
+        <div class="team-member">
+            <h3>Jane Smith - CTO</h3>
+            <p>Jane is an expert in cloud computing and artificial intelligence, overseeing the technical operations of the company and ensuring we remain at the forefront of technological innovation.</p>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Data for the workflow pie chart
+        const workflowChart = document.getElementById('workflowChart').getContext('2d');
+        const workflowData = {
+            labels: ['Requirement Gathering', 'Design & Planning', 'Development', 'Testing & QA', 'Deployment', 'Support & Maintenance'],
+            datasets: [{
+                label: 'Company Workflow',
+                data: [10, 15, 30, 20, 15, 10],
+                backgroundColor: ['#42a5f5', '#ab47bc', '#ffca28', '#ef5350', '#66bb6a', '#8d6e63'],
+            }]
+        };
+
+        // Create the pie chart for workflow
+        const companyWorkflowChart = new Chart(workflowChart, {
+            type: 'pie',
+            data: workflowData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        // Data for the job placement chart
+        const jobChart = document.getElementById('jobChart').getContext('2d');
+        const jobData = {
+            labels: ['Software Development', 'Data Science', 'Cloud Computing', 'Cybersecurity', 'Project Management', 'UI/UX Design'],
+            datasets: [{
+                label: 'Students Placed in Jobs',
+                data: [40, 25, 15, 10, 5, 5],
+                backgroundColor: ['#42a5f5', '#26a69a', '#ff7043', '#ab47bc', '#66bb6a', '#78909c'],
+            }]
+        };
+
+        // Create the bar chart for job placement
+        const jobPlacementChart = new Chart(jobChart, {
+            type: 'bar',
+            data: jobData,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
