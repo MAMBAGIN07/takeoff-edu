@@ -397,26 +397,34 @@
     }, 500);
 </script>
     <script>
-    document.addEventListener('click', function (e) {
-        const dropdownToggle = e.target.closest('.dropdown-toggle');
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown');
 
-        // Prevent default for dropdown toggles to avoid navigation issues
-        if (dropdownToggle && dropdownToggle.getAttribute('href') === '#') {
-            e.preventDefault();
-        }
+        dropdownItems.forEach((dropdown) => {
+            dropdown.addEventListener('mouseover', () => {
+                const submenu = dropdown.querySelector('.dropdown-menu');
+                if (submenu) {
+                    submenu.classList.add('show');
+                }
+            });
 
-        // Allow navigation for dropdown links
-        const dropdownLink = e.target.closest('.dropdown-menu .dropdown-item:not(.dropdown-toggle)');
-        if (dropdownLink && dropdownLink.getAttribute('href')) {
-            window.location.href = dropdownLink.getAttribute('href');
-        }
-    });
+            dropdown.addEventListener('mouseout', () => {
+                const submenu = dropdown.querySelector('.dropdown-menu');
+                if (submenu) {
+                    submenu.classList.remove('show');
+                }
+            });
 
-    // Prevent dropdown from closing too quickly
-    const dropdowns = document.querySelectorAll('.dropdown-menu');
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('mouseover', () => dropdown.classList.add('show'));
-        dropdown.addEventListener('mouseout', () => dropdown.classList.remove('show'));
+            // Keep the menu open when clicking on dropdown-toggle
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const submenu = dropdown.querySelector('.dropdown-menu');
+                    submenu.classList.toggle('show');
+                });
+            }
+        });
     });
 </script>
 
