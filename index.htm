@@ -144,18 +144,18 @@
     position: absolute;
     left: 100%; /* Align beside parent by default */
     top: 0;
-    margin-left: 0rem;
+    margin-left: 0.1rem;
     z-index: 1050;
 }
 
-/* Show nested dropdowns on hover or focus */
-.dropdown-menu .dropdown-item:hover + .dropdown-menu,
+/* Show nested dropdown on hover or focus */
 .dropdown-menu .dropdown-item:focus + .dropdown-menu,
-.dropdown-menu .dropdown-item.show + .dropdown-menu {
+.dropdown-menu .dropdown-item:hover + .dropdown-menu,
+.dropdown-menu .dropdown-menu:hover {
     display: block;
 }
 
-/* Align dropdowns below in mobile view */
+/* Mobile view: align dropdowns below the parent */
 @media (max-width: 768px) {
     .dropdown-menu .dropdown-menu {
         position: relative; /* Align below */
@@ -164,8 +164,7 @@
         margin: 0;
     }
 }
-
-    </style>
+</style>
 </head>
 <body>
 <section class="ftco-section">  
@@ -216,16 +215,15 @@
         <div class="dropdown">
             <a class="dropdown-item dropdown-toggle" href="#" id="galleryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
             <div class="dropdown-menu" aria-labelledby="galleryDropdown">
-                <a class="dropdown-item" href="./menu_files/about.html">Gallery 1</a>
-                <a class="dropdown-item" href="./menu_files/about.html">Gallery 2</a>
-                <a class="dropdown-item" href="./menu_files/about.html">Gallery 3</a>
+                <a class="dropdown-item" href="./menu_files/gallery1.html">Gallery 1</a>
+                <a class="dropdown-item" href="./menu_files/gallery2.html">Gallery 2</a>
+                <a class="dropdown-item" href="./menu_files/gallery3.html">Gallery 3</a>
             </div>
         </div>
     </div>
 </li>
 
-
-                    
+ 
                     <li class="nav-item"><a href="" class="nav-link">Work</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
